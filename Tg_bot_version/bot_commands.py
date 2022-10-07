@@ -48,15 +48,15 @@ def yt_downloader_bot():
         tag = tag.split()
         tag = int(tag[1])
         download(tag)
-        file = open(f"C:\\Users\\ukeuk\\Desktop\\Учеба\\YouTube_downloader\\Tranzit\\{path_downloaded_file}", 'rb')
+        file = open(f"C:\\Users\\ukeuk\\Desktop\\Учеба\\YouTube_downloader\\Tg_bot_version\\Tranzit\\{path_downloaded_file}", 'rb')
         await bot.send_document(msg.chat.id, file)
-        os.remove(f"C:\\Users\\ukeuk\\Desktop\\Учеба\\YouTube_downloader\\Tranzit\\{path_downloaded_file}")
+        os.remove(f"C:\\Users\\ukeuk\\Desktop\\Учеба\\YouTube_downloader\\Tg_bot_version\\Tranzit\\{path_downloaded_file}")
 
 
     def download(tag):
         yt = pytube.YouTube(link)
         ys = yt.streams.get_by_itag(tag)
-        p = "C:\\Users\\ukeuk\\Desktop\\Учеба\\YouTube_downloader\\Tranzit\\"
+        p = "C:\\Users\\ukeuk\\Desktop\\Учеба\\YouTube_downloader\\Tg_bot_version\\Tranzit\\"
         ys.download(p)
         global path_downloaded_file
         path_downloaded_file = str(os.listdir(p)[0])
