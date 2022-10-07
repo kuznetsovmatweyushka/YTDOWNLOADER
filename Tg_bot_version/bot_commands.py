@@ -5,7 +5,7 @@ import os
 
 
 def yt_downloader_bot():
-    TOKEN = "5642956556:AAFAk_A2IRoTM43qEaQ4s_6wgstgFtSG51g"
+    TOKEN = "YOUR TOKEN"
 
     bot = Bot(token=TOKEN)
     dp = Dispatcher(bot)
